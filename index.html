@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WA Sender - Download WhatsApp Marketing Software</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #c8e6c9 0%, #b2dfdb 50%, #e1bee7 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 10% 80%, rgba(178, 223, 219, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 90% 20%, rgba(200, 230, 201, 0.3) 0%, transparent 50%);
+            pointer-events: none;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) translateX(0px); }
+            50% { transform: translateY(-15px) translateX(15px); }
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 25px;
+            padding: 30px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+            width: 100%;
+            position: relative;
+            animation: slideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid rgba(200, 230, 201, 0.3);
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px) scale(0.98);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            font-size: 36px;
+            color: #4caf50;
+            filter: drop-shadow(0 3px 6px rgba(76, 175, 80, 0.2));
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover i {
+            transform: scale(1.1) rotate(10deg);
+            filter: drop-shadow(0 5px 10px rgba(76, 175, 80, 0.3));
+        }
+
+        .logo h1 {
+            font-size: 32px;
+            color: #2e7d32;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .version {
+            background: linear-gradient(135deg, #e8f5e8, #c8e6c9);
+            color: #2e7d32;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 3px 10px rgba(46, 125, 50, 0.15);
+            border: 1px solid rgba(46, 125, 50, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .version:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(46, 125, 50, 0.25);
+        }
+
+        /* Notice Boxes */
+        .notice-box {
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 5px solid;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .notice-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
+            pointer-events: none;
+        }
+
+        .notice-box:hover {
+            transform: translateX(5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .notice-box.important {
+            background: #ffebee;
+            border-left-color: #f44336;
+            color: #c62828;
+        }
+
+        .notice-box.note {
+            background: #fff8e1;
+            border-left-color: #ff9800;
+            color: #e65100;
+        }
+
+        .notice-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .notice-header i {
+            font-size: 16px;
+        }
+
+        .notice-content ul {
+            margin-left: 20px;
+            margin-top: 8px;
+        }
+
+        .notice-content li {
+            margin-bottom: 6px;
+            line-height: 1.4;
+            font-size: 13px;
+        }
+
+        /* Download Section */
+        .download-section {
+            background: linear-gradient(135deg, #ffffff 0%, #f1f8e9 100%);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 25px;
+            text-align: center;
+            border: 2px solid rgba(76, 175, 80, 0.2);
+            box-shadow: 0 10px 25px rgba(76, 175, 80, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .download-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(76, 175, 80, 0.05), transparent);
+            animation: shimmer 4s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        .download-info {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .info-row {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 15px 18px;
+            border-radius: 15px;
+            border: 1px solid rgba(76, 175, 80, 0.15);
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .info-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(76, 175, 80, 0.15);
+            background: rgba(255, 255, 255, 1);
+        }
+
+        .info-item .label {
+            font-weight: 600;
+            color: #555;
+            font-size: 12px;
+        }
+
+        .info-item .value {
+            color: #00d084;
+            font-weight: 700;
+            font-size: 12px;
+        }
+
+        .download-btn {
+            background: linear-gradient(135deg, #4caf50 0%, #66bb6a 50%, #81c784 100%);
+            color: white;
+            border: none;
+            padding: 20px 45px;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            width: 100%;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 8px 20px rgba(76, 175, 80, 0.25);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .download-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .download-btn:hover::before {
+            left: 100%;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(76, 175, 80, 0.35);
+        }
+
+        .download-btn:active {
+            transform: translateY(-1px);
+        }
+
+        .download-btn i {
+            font-size: 18px;
+        }
+
+        /* Sections */
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section h3 {
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+        }
+
+        .section h3 i {
+            color: #00d084;
+            font-size: 14px;
+        }
+
+        /* Requirements */
+        .requirements {
+            background: linear-gradient(135deg, #ffffff 0%, #f9fbe7 100%);
+            border-radius: 15px;
+            padding: 20px;
+            border: 2px solid rgba(76, 175, 80, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .req-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .req-item:last-child {
+            border-bottom: none;
+        }
+
+        .req-label {
+            font-weight: 600;
+            color: #555;
+            flex: 1;
+            font-size: 13px;
+        }
+
+        .req-value {
+            color: #333;
+            flex: 2;
+            text-align: right;
+            font-size: 13px;
+        }
+
+        /* What's New */
+        .whats-new {
+            list-style: none;
+            padding: 0;
+        }
+
+        .whats-new li {
+            background: #e8f5e8;
+            padding: 10px 12px;
+            border-radius: 6px;
+            border-left: 4px solid #00d084;
+            margin-bottom: 8px;
+            color: #2e7d32;
+            font-weight: 500;
+            font-size: 13px;
+        }
+
+        /* Best Practices */
+        .practices {
+            list-style: none;
+            padding: 0;
+        }
+
+        .practices li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+            color: #555;
+            line-height: 1.4;
+            font-size: 13px;
+        }
+
+        .practices li:last-child {
+            border-bottom: none;
+        }
+
+        .practices i {
+            color: #4caf50;
+            font-size: 18px;
+            flex-shrink: 0;
+            margin-top: 2px;
+            filter: drop-shadow(0 2px 4px rgba(76, 175, 80, 0.2));
+            transition: all 0.3s ease;
+        }
+
+        .practices li:hover i {
+            transform: scale(1.2) rotate(10deg);
+            filter: drop-shadow(0 4px 8px rgba(76, 175, 80, 0.4));
+        }
+
+        /* Disclaimer */
+        .disclaimer {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .disclaimer h4 {
+            color: #856404;
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .disclaimer p {
+            color: #856404;
+            line-height: 1.5;
+            font-size: 12px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding-top: 15px;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .footer-info p {
+            color: #666;
+            margin-bottom: 6px;
+            font-size: 12px;
+        }
+
+        .copyright p {
+            color: #999;
+            font-size: 11px;
+            margin-top: 8px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .card {
+                padding: 15px;
+                margin: 10px;
+            }
+            
+            .header {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+            
+            .logo h1 {
+                font-size: 20px;
+            }
+            
+            .download-info {
+                gap: 10px;
+            }
+            
+            .info-row {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            
+            .req-item {
+                flex-direction: column;
+                gap: 5px;
+                text-align: left;
+            }
+            
+            .req-value {
+                text-align: left;
+            }
+            
+         .download-btn {
+                padding: 12px 20px;
+                font-size: 14px;
+            }
+            
+            .practices li {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            
+            .card {
+                padding: 12px;
+            }
+            
+            .logo h1 {
+                font-size: 18px;
+            }
+            
+            .logo i {
+                font-size: 20px;
+            }
+            
+            .download-btn {
+                padding: 10px 15px;
+                font-size: 13px;
+            }
+            
+            .section h3 {
+                font-size: 14px;
+            }
+            
+            .notice-box {
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <!-- Header -->
+            <div class="header">
+                <div class="logo">
+                    <i class="fab fa-whatsapp"></i>
+                    <h1>WA Sender</h1>
+                </div>
+                <div class="version">Version 4.11.8</div>
+            </div>
+
+            <!-- Important Notice -->
+            <div class="notice-box important">
+                <div class="notice-header">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <strong>IMPORTANT: Meta/WhatsApp Anti-Spam Policy</strong>
+                </div>
+                <div class="notice-content">
+                    <p>To ensure compliance with Meta's Anti-Spam Policy, please adhere to the following:</p>
+                    <ul>
+                        <li>Only send messages to users who have given explicit consent.</li>
+                        <li>Provide a clear opt-out option in every message.</li>
+                        <li>Avoid excessive messaging that could be considered spam.</li>
+                        <li>Use the tool responsibly and respect user privacy.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Note -->
+            <div class="notice-box note">
+                <div class="notice-header">
+                    <i class="fas fa-info-circle"></i>
+                    <strong>Note:</strong> Make sure Windows Defender or your antivirus is configured to allow the installation.
+                </div>
+            </div>
+
+            <!-- Download Section -->
+            <div class="download-section">
+                <div class="download-info">
+                    <div class="info-row">
+                        <div class="info-item">
+                            <span class="label">VERSION:</span>
+                            <span class="value">4.11.8</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">UPDATED:</span>
+                            <span class="value">09/01/2026</span>
+                        </div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-item">
+                            <span class="label">FILE SIZE:</span>
+                            <span class="value">31.6 MB</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">FILE NAME:</span>
+                            <span class="value">wasender.exe</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="download-btn">
+                    <i class="fas fa-download"></i>
+                    Download WA Sender for Windows
+                </button>
+            </div>
+
+            <!-- System Requirements -->
+            <div class="section">
+                <h3><i class="fas fa-desktop"></i> System Requirements</h3>
+                <div class="requirements">
+                    <div class="req-item">
+                        <span class="req-label">Operating System:</span>
+                        <span class="req-value">Windows 10/11 (64-bit)</span>
+                    </div>
+                    <div class="req-item">
+                        <span class="req-label">RAM:</span>
+                        <span class="req-value">4 GB minimum (8 GB recommended)</span>
+                    </div>
+                    <div class="req-item">
+                        <span class="req-label">Disk Space:</span>
+                        <span class="req-value">500 MB</span>
+                    </div>
+                    <div class="req-item">
+                        <span class="req-label">Internet:</span>
+                        <span class="req-value">Stable connection required</span>
+                    </div>
+                    <div class="req-item">
+                        <span class="req-label">.NET Framework:</span>
+                        <span class="req-value">4.7.2 or higher</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- What's New -->
+            <div class="section">
+                <h3><i class="fas fa-star"></i> What's New in Version 4.11.8</h3>
+                <ul class="whats-new">
+                    <li>Fixed bugs</li>
+                </ul>
+            </div>
+
+            <!-- Best Practices -->
+            <div class="section">
+                <h3><i class="fas fa-shield-alt"></i> Best Practices for Meta Compliance</h3>
+                <ul class="practices">
+                    <li><i class="fas fa-check-circle"></i> Always get user consent before messaging</li>
+                    <li><i class="fas fa-check-circle"></i> Include clear opt-out instructions</li>
+                    <li><i class="fas fa-check-circle"></i> Limit message frequency to avoid spam</li>
+                    <li><i class="fas fa-check-circle"></i> Personalize messages for better engagement</li>
+                    <li><i class="fas fa-check-circle"></i> Monitor delivery and response rates</li>
+                    <li><i class="fas fa-check-circle"></i> Stay updated with Meta's policies</li>
+                </ul>
+            </div>
+
+            <!-- Disclaimer -->
+            <div class="disclaimer">
+                <h4>Disclaimer:</h4>
+                <p>This tool is designed for legitimate marketing and communication purposes. Users are responsible for ensuring compliance with all applicable laws and regulations, including Meta's WhatsApp Business Policy. Misuse of this software may result in account suspension or legal consequences.</p>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <div class="footer-info">
+                    <p>Last updated: January 09, 2026</p>
+                    <p>Need help? Access the Control Panel or contact our support team</p>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2026 WA Sender. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeDownloadButton();
+            initializeCopyFunctionality();
+            initializeScrollAnimations();
+            initializeParallaxEffect();
+            initializeMicroInteractions();
+        });
+
+        // Scroll animations
+        function initializeScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }, index * 100);
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe all sections
+            document.querySelectorAll('.section, .notice-box, .download-section').forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(30px)';
+                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(section);
+            });
+        }
+
+        // Parallax effect on mouse move
+        function initializeParallaxEffect() {
+            document.addEventListener('mousemove', (e) => {
+                const mouseX = e.clientX / window.innerWidth;
+                const mouseY = e.clientY / window.innerHeight;
+                
+                const card = document.querySelector('.card');
+                if (card) {
+                    const moveX = (mouseX - 0.5) * 20;
+                    const moveY = (mouseY - 0.5) * 20;
+                    
+                    card.style.transform = `translateX(${moveX}px) translateY(${moveY}px)`;
+                }
+            });
+        }
+
+        // Micro-interactions
+        function initializeMicroInteractions() {
+            // Add ripple effect to buttons
+            const buttons = document.querySelectorAll('button');
+            buttons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    const ripple = document.createElement('span');
+                    const rect = this.getBoundingClientRect();
+                    const size = Math.max(rect.width, rect.height);
+                    const x = e.clientX - rect.left - size / 2;
+                    const y = e.clientY - rect.top - size / 2;
+                    
+                    ripple.style.width = ripple.style.height = size + 'px';
+                    ripple.style.left = x + 'px';
+                    ripple.style.top = y + 'px';
+                    ripple.classList.add('ripple');
+                    
+                    this.appendChild(ripple);
+                    
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 600);
+                });
+            });
+            
+            // Add floating animation to info items
+            const infoItems = document.querySelectorAll('.info-item');
+            infoItems.forEach((item, index) => {
+                item.style.animationDelay = `${index * 0.1}s`;
+                item.classList.add('float-in');
+            });
+        }
+
+        // Download button functionality
+        function initializeDownloadButton() {
+            const downloadBtn = document.querySelector('.download-btn');
+            
+            if (downloadBtn) {
+                downloadBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Add loading state
+                    const originalContent = this.innerHTML;
+                    this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Preparing download...';
+                    this.disabled = true;
+                    
+                    // Simulate download preparation
+                    setTimeout(() => {
+                        // Create download link for actual file
+                        const downloadLink = document.createElement('a');
+                        downloadLink.href = './Setup File/wasender.exe';
+                        downloadLink.download = 'wasender.exe';
+                        downloadLink.style.display = 'none';
+                        
+                        // Add to DOM and trigger click
+                        document.body.appendChild(downloadLink);
+                        downloadLink.click();
+                        
+                        // Add celebration effect
+                        createConfetti();
+                        
+                        // Show success message
+                        this.innerHTML = '<i class="fas fa-check"></i> Download Started!';
+                        this.style.background = '#28a745';
+                        
+                        // Reset button after delay
+                        setTimeout(() => {
+                            this.innerHTML = originalContent;
+                            this.disabled = false;
+                            this.style.background = '';
+                            document.body.removeChild(downloadLink);
+                        }, 2000);
+                        
+                        // Show notification
+                        showNotification('Download started! Check your downloads folder.', 'success');
+                    }, 1000);
+                });
+            }
+        }
+
+        // Copy functionality for version info
+        function initializeCopyFunctionality() {
+            const infoItems = document.querySelectorAll('.info-item');
+            
+            infoItems.forEach(item => {
+                item.style.cursor = 'pointer';
+                item.addEventListener('click', function() {
+                    const value = this.querySelector('.value').textContent;
+                    const label = this.querySelector('.label').textContent.replace(':', '');
+                    
+                    copyToClipboard(`${label}: ${value}`);
+                    showNotification(`Copied: ${label}: ${value}`, 'info');
+                });
+            });
+        }
+
+        // Copy to clipboard function
+        function copyToClipboard(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            
+            try {
+                document.execCommand('copy');
+            } catch (err) {
+                console.error('Failed to copy text: ', err);
+            }
+            
+            document.body.removeChild(textarea);
+        }
+
+        // Show cute notification function
+        function showNotification(message, type = 'info') {
+            // Remove existing notifications
+            const existingNotification = document.querySelector('.notification');
+            if (existingNotification) {
+                existingNotification.remove();
+            }
+            
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.className = `notification notification-${type}`;
+            notification.innerHTML = `
+                <i class="fas fa-${type === 'success' ? 'check-circle' : 'info-circle'}"></i>
+                <span>${message}</span>
+            `;
+            
+            // Add cute styles
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: ${type === 'success' ? 'linear-gradient(135deg, #4caf50, #66bb6a)' : 'linear-gradient(135deg, #42a5f5, #66bb6a)'};
+                color: white;
+                padding: 15px 20px;
+                border-radius: 15px;
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                z-index: 1000;
+                font-size: 14px;
+                font-weight: 500;
+                animation: bounceIn 0.5s ease;
+                border: 2px solid rgba(255, 255, 255, 0.3);
+            `;
+            
+            // Add to DOM
+            document.body.appendChild(notification);
+            
+            // Remove after 3 seconds
+            setTimeout(() => {
+                notification.style.animation = 'bounceOut 0.5s ease';
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.parentNode.removeChild(notification);
+                    }
+                }, 500);
+            }, 3000);
+        }
+
+        // Confetti celebration effect with cute colors
+        function createConfetti() {
+            const colors = ['#4caf50', '#81c784', '#a5d6a7', '#c8e6c9', '#e8f5e9', '#ffeb3b', '#ffc107', '#ff9800'];
+            const confettiCount = 30;
+            
+            for (let i = 0; i < confettiCount; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.cssText = `
+                    position: fixed;
+                    width: ${8 + Math.random() * 8}px;
+                    height: ${8 + Math.random() * 8}px;
+                    background: ${colors[Math.floor(Math.random() * colors.length)]};
+                    left: ${Math.random() * 100}%;
+                    top: -10px;
+                    opacity: 0.9;
+                    transform: rotate(${Math.random() * 360}deg);
+                    animation: fall ${3 + Math.random() * 2}s ease-in-out;
+                    z-index: 9999;
+                    border-radius: ${Math.random() > 0.5 ? '50%' : '20%'};
+                `;
+                
+                document.body.appendChild(confetti);
+                
+                setTimeout(() => {
+                    confetti.remove();
+                }, 5000);
+            }
+        }
+
+        // Add CSS animations dynamically with cute effects
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes bounceIn {
+                0% {
+                    transform: scale(0.3) rotate(0deg);
+                    opacity: 0;
+                }
+                50% {
+                    transform: scale(1.05) rotate(5deg);
+                }
+                70% {
+                    transform: scale(0.9) rotate(-3deg);
+                }
+                100% {
+                    transform: scale(1) rotate(0deg);
+                    opacity: 1;
+                }
+            }
+            
+            @keyframes bounceOut {
+                0% {
+                    transform: scale(1) rotate(0deg);
+                    opacity: 1;
+                }
+                100% {
+                    transform: scale(0.3) rotate(10deg);
+                    opacity: 0;
+                }
+            }
+            
+            @keyframes fall {
+                0% {
+                    transform: translateY(0) rotate(0deg);
+                    opacity: 1;
+                }
+                100% {
+                    transform: translateY(100vh) rotate(720deg);
+                    opacity: 0;
+                }
+            }
+            
+            @keyframes float-in {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px) scale(0.95);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0) scale(1);
+                }
+            }
+            
+            .ripple {
+                position: absolute;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.7);
+                transform: scale(0);
+                animation: ripple-animation 0.8s ease-out;
+                pointer-events: none;
+            }
+            
+            @keyframes ripple-animation {
+                to {
+                    transform: scale(5);
+                    opacity: 0;
+                }
+            }
+            
+            .float-in {
+                animation: float-in 0.6s ease forwards;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
