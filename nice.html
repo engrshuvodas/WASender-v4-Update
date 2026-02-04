@@ -544,26 +544,53 @@
             position: fixed;
             bottom: 30px;
             right: 30px;
-            width: 60px;
-            height: 60px;
+            width: 65px;
+            height: 65px;
             background: #25D366;
             color: white;
-            border-radius: 50px;
+            border-radius: 50%;
             text-align: center;
-            font-size: 30px;
-            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
             z-index: 1000;
             display: flex;
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            transition: all 0.3s ease;
-            animation: bounce 2s infinite;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
         .whatsapp-float:hover {
-            transform: scale(1.1);
+            transform: scale(1.1) rotate(5deg);
             background: #128C7E;
+        }
+
+        .whatsapp-float::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(37, 211, 102, 0.5);
+            border-radius: 50%;
+            z-index: -1;
+            animation: pulse-border 2s infinite;
+        }
+
+        @keyframes pulse-border {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1.6);
+                opacity: 0;
+            }
+        }
+
+        .support-action-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
         }
 
         @keyframes bounce {
@@ -583,6 +610,61 @@
             60% {
                 transform: translateY(-5px);
             }
+        }
+
+        /* Social Icons Branding */
+        .social-link-card[data-platform="youtube"]:hover {
+            border-color: #FF0000;
+        }
+
+        .social-link-card[data-platform="youtube"]:hover .support-action-icon {
+            background: #FF0000;
+            color: white;
+        }
+
+        .social-link-card[data-platform="github"]:hover {
+            border-color: #333;
+        }
+
+        .social-link-card[data-platform="github"]:hover .support-action-icon {
+            background: #333;
+            color: white;
+        }
+
+        .social-link-card[data-platform="fiverr"]:hover {
+            border-color: #1dbf73;
+        }
+
+        .social-link-card[data-platform="fiverr"]:hover .support-action-icon {
+            background: #1dbf73;
+            color: white;
+        }
+
+        .social-link-card[data-platform="linkedin"]:hover {
+            border-color: #0077b5;
+        }
+
+        .social-link-card[data-platform="linkedin"]:hover .support-action-icon {
+            background: #0077b5;
+            color: white;
+        }
+
+        .social-link-card[data-platform="portfolio"]:hover {
+            border-color: #6366f1;
+        }
+
+        .social-link-card[data-platform="portfolio"]:hover .support-action-icon {
+            background: #6366f1;
+            color: white;
+        }
+
+        .social-link-card[data-platform="email"]:hover {
+            border-color: #ea4335;
+        }
+
+        .social-link-card[data-platform="email"]:hover .support-action-icon {
+            background: #ea4335;
+            color: white;
         }
     </style>
 </head>
@@ -689,7 +771,12 @@
                     <div class="support-grid">
                         <a href="https://wa.me/+8801765245872?text=Hello,%20I%20need%20activation%20key%20for%20WA%20Sender"
                             target="_blank" class="support-action-card">
-                            <div class="support-action-icon">🔑</div>
+                            <div class="support-action-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M12.65 10C11.83 7.67 9.61 6 7 6c-3.31 0-6 2.69-6 6s2.69 6 6 6c2.61 0 4.83-1.67 5.65-4H17v4h4v-4h2v-4H12.65zM7 14c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" />
+                                </svg>
+                            </div>
                             <div class="support-action-text">
                                 <strong>Get Activation Key</strong>
                                 <span>Instant license activation</span>
@@ -697,10 +784,103 @@
                         </a>
                         <a href="https://wa.me/+8801765245872?text=Hello,%20I%20need%20support%20for%20WA%20Sender"
                             target="_blank" class="support-action-card">
-                            <div class="support-action-icon">🎧</div>
+                            <div class="support-action-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2c-5.52 0-10 4.48-10 10v9h3v-7h-1v-2c0-4.41 3.59-8 8-8s8 3.59 8 8v2h-1v7h3v-9c0-5.52-4.48-10-10-10z" />
+                                </svg>
+                            </div>
                             <div class="support-action-text">
                                 <strong>Contact Support</strong>
                                 <span>24/7 technical assistance</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Community & Social Section -->
+                <div class="section">
+                    <h2 class="section-title">
+                        <div class="section-icon">🌐</div>
+                        Follow Developer
+                    </h2>
+                    <div class="support-grid">
+                        <a href="https://www.youtube.com/@engr_shuvo" target="_blank"
+                            class="support-action-card social-link-card" data-platform="youtube">
+                            <div class="support-action-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                                </svg>
+                            </div>
+                            <div class="support-action-text">
+                                <strong>YouTube Channel</strong>
+                                <span>Tutorials & Updates</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/engrshuvodas" target="_blank"
+                            class="support-action-card social-link-card" data-platform="github">
+                            <div class="support-action-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                                </svg>
+                            </div>
+                            <div class="support-action-text">
+                                <strong>GitHub Profile</strong>
+                                <span>Source code & Projects</span>
+                            </div>
+                        </a>
+                        <a href="https://www.fiverr.com/shuvo_das74886" target="_blank"
+                            class="support-action-card social-link-card" data-platform="fiverr">
+                            <div class="support-action-icon">
+                                <svg viewBox="0 0 512 512">
+                                    <path
+                                        d="M416 33.3H96c-34.6 0-62.7 28.1-62.7 62.7V416c0 34.6 28.1 62.7 62.7 62.7H416c34.6 0 62.7-28.1 62.7-62.7V96c0-34.6-28.1-62.7-62.7-62.7zM167.3 358.5h-34.7V172.9h34.7v185.6zm70.6 0h-34.7V172.9h34.7v185.6zm99.8 0h-34.7v-76.4c0-21.3-8.8-32.9-26.4-32.9-17.6 0-26.4 11.6-26.4 32.9v76.4h-34.7V172.9h34.7v18.1c8.4-12.1 21.6-21.4 39.5-21.4 31.7 0 53.4 20.3 53.4 57.6v131.3zm84.3 0h-34.7V172.9h34.7v185.6z" />
+                                </svg>
+                            </div>
+                            <div class="support-action-text">
+                                <strong>Fiverr Reviews</strong>
+                                <span>Buy & Leave Review</span>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/engr-shuvo-das-a28085260/" target="_blank"
+                            class="support-action-card social-link-card" data-platform="linkedin">
+                            <div class="support-action-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.238 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                </svg>
+                            </div>
+                            <div class="support-action-text">
+                                <strong>LinkedIn</strong>
+                                <span>Professional Profile</span>
+                            </div>
+                        </a>
+                        <a href="https://engrshuvodas.github.io/me/" target="_blank"
+                            class="support-action-card social-link-card" data-platform="portfolio">
+                            <div class="support-action-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                                </svg>
+                            </div>
+                            <div class="support-action-text">
+                                <strong>Portfolio</strong>
+                                <span>About Me & Projects</span>
+                            </div>
+                        </a>
+                        <a href="mailto:engrshuvoda@gmail.com" target="_blank"
+                            class="support-action-card social-link-card" data-platform="email">
+                            <div class="support-action-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                                </svg>
+                            </div>
+                            <div class="support-action-text">
+                                <strong>Email Me</strong>
+                                <span>engrshuvoda@gmail.com</span>
                             </div>
                         </a>
                     </div>
@@ -811,10 +991,9 @@
 
     <!-- Floating WhatsApp -->
     <a href="https://wa.me/+8801765245872" class="whatsapp-float" target="_blank" title="Chat with support">
-        <svg style="width: 35px; height: 35px; fill: white;" viewBox="0 0 24 24">
+        <svg style="width: 38px; height: 38px; fill: white;" viewBox="0 0 448 512">
             <path
-                d="M12.031 6.172c-2.32 0-4.519.903-6.16 2.544-3.399 3.4-3.399 8.921 0 12.321 1.641 1.641 3.84 2.544 6.16 2.544 1.159 0 2.279-.241 3.32-.71l4.479 1.48s-.179-4.23-.3-4.53c.57-1.091.88-2.311.88-3.561 0-2.32-.903-4.519-2.544-6.16-1.641-1.641-3.84-2.544-6.16-2.544zm0 1.05c1.94 0 3.76.75 5.12 2.11 1.37 1.37 2.12 3.19 2.12 5.12 0 1.25-.32 2.44-.92 3.47l.19 2.76-2.58-.85c-1.01.55-2.15.86-3.35.86-1.94 0-3.76-.75-5.12-2.11-2.82-2.83-2.83-7.42 0-10.25 1.37-1.36 3.19-2.11 5.12-2.11zm-2.8 3.51c-.13 0-.27.01-.39.04-.33.09-.58.32-.7.63-.13.33-.14.71.05 1.2.18.48.56 1.13 1.12 1.83.56.7 1.25 1.39 1.95 2.1.7.71 1.38 1.4 2.08 1.96.7.56 1.35.94 1.83 1.12.5.19.87.18 1.2.05.31-.12.54-.37.63-.7.04-.12.04-.26.04-.39v-.25c0-.14-.1-.3-.23-.37l-1.37-.69c-.14-.07-.31-.07-.45 0l-.36.18c-.12.06-.24.03-.35-.06-.3-.24-.62-.51-.94-.82-.32-.31-.58-.63-.82-.93-.08-.12-.11-.24-.05-.36l.18-.36c.07-.14.07-.31 0-.45l-.69-1.37c-.07-.13-.23-.23-.37-.23h-.25z">
-            </path>
+                d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.7 17.8 69.7 27.2 106.2 27.2h.1c122.3 0 222-99.6 222-222 0-59.3-23-115.1-65.1-157.1zM223.9 446.3c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 365.7l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.1-3.2-5.5-.3-8.5 2.5-11.2 2.5-2.4 5.5-6.5 8.3-9.7 2.8-3.3 3.7-5.5 5.5-9.3 1.9-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.3 5.7 23.7 9.1 31.7 11.7 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
         </svg>
     </a>
 </body>
