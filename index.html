@@ -397,6 +397,54 @@
             margin-right: 8px;
         }
 
+        /* Guideline Button Style */
+        /* Guideline Button Style - Premium Adjustment */
+        .guideline-container {
+            background: linear-gradient(135deg, #f0f7ff 0%, #e6f0ff 100%);
+            border: 2px dashed #007bff44;
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 123, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .guideline-container:hover {
+            border-color: #007bff88;
+            box-shadow: 0 15px 35px rgba(0, 123, 255, 0.1);
+        }
+
+        .guideline-text {
+            color: #004a99;
+            font-size: 15px;
+            margin-bottom: 18px;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        .guideline-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 700;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+        }
+
+        .guideline-button:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(0, 123, 255, 0.4);
+            background: linear-gradient(135deg, #0056b3 0%, #004085 100%);
+        }
+
+
         /* Responsive Design System */
         @media (max-width: 992px) {
             .container {
@@ -894,6 +942,17 @@
                         <div class="info-label">File Name</div>
                         <div class="info-value">wasender.exe</div>
                     </div>
+                </div>
+
+                <!-- Guideline Section -->
+                <div class="guideline-container">
+                    <p class="guideline-text">
+                        Please read the guideline PDF carefully before starting the campaign.
+                    </p>
+                    <a href="./Top Tips and Guidelines for Securing WASENDER.pdf" download class="guideline-button">
+                        <span class="download-icon">📄</span>
+                        Download Guideline PDF
+                    </a>
                 </div>
 
                 <!-- Download Button -->
